@@ -1,0 +1,15 @@
+terraform-getting-started/*
+terraform-getting-started.zip
+.DS_Store
+/dev/.terraform/**
+/dev/terraform.tfvars
+**/.terraform/**
+*/**/.tfvars
+*.tfstate
+*.tfstate.backup
+*.tfstate.*.backup
+*.tfvars
+*.pub
+terraform
+terraform_linux
+.terraform.lock.hcl

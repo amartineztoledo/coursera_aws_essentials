@@ -1,0 +1,51 @@
+# === Common ===
+region = "us-east-1"
+env = "dev"
+common_tags = {
+  Environment = "dev"
+  Project = "EmployeesApp"
+  Terraform = true
+}
+account_number = # An account number
+
+# === VPC ===
+vpc_name = "employees-app-vpc"
+vpc_cidr = "10.1.0.0/16"
+vpc_azs = ["us-east-1a", "us-east-1b"]
+vpc_public_subnets = ["10.1.1.0/24", "10.1.2.0/24"]
+vpc_private_subnets = ["10.1.3.0/24", "10.1.4.0/24"]
+
+# === IAM ===
+s3_dynamodb_role_name = "s3-dynamodb-full-access-profile"
+s3_dynamodb_profile_name = "s3-dynamodb-full-access-profile"
+
+# === DynamoDB ===
+dynamodb_table_name = "Employees"
+
+# === S3 Bucket ===
+s3_bucket_name = "employee-photo-bucket-amt-567567"
+
+# === Load Balancer ===
+load_balancer_sg_name = "employees-app-lb-sg"
+load_balancer_target_group_name = "employees-app-lb-tg"
+
+# === EC2 ===
+ssh_key_pair_name = "employees-app-key-pair"
+ssh_key_pair_public_key_path = "~/.ssh/id_rsa.pub"
+security_group_name = "employees-app-sg"
+security_group_description = "employees-app-sg"
+app_launch_template_name = "employees-app-launch-template"
+app_launch_template_image_id = "ami-051f7e7f6c2f40dc1"
+app_launch_template_instance_type = "t2.micro"
+
+# === AutoScaling ===
+autoscaling_group_name = "employees-app-asg"
+autoscaling_group_min_size = 1
+autoscaling_group_max_size = 4
+autoscaling_group_desired_capacity = 2
+autoscaling_group_health_check_grace_period = 300
+autoscaling_policy_name = "employees-app-asg-policy"
+autoscaling_policy_target_value = 60.0
+autoscaling_sns_topic_name = "employees-app-asg-sns-topic"
+autoscaling_notifications = ["autoscaling:EC2_INSTANCE_LAUNCH", "autoscaling:EC2_INSTANCE_TERMINATE", "autoscaling:EC2_INSTANCE_LAUNCH_ERROR", "autoscaling:EC2_INSTANCE_TERMINATE_ERROR"]
+autoscaling_notifications_email = # A notifications email

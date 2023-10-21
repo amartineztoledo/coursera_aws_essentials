@@ -23,7 +23,7 @@ s3_dynamodb_profile_name = "s3-dynamodb-full-access-profile"
 dynamodb_table_name = "Employees"
 
 # === S3 Bucket ===
-s3_bucket_name = "employee-photo-bucket-amt-567567"
+s3_bucket_name = # An unique bucket name
 
 # === Load Balancer ===
 load_balancer_sg_name = "employees-app-lb-sg"
